@@ -5,4 +5,5 @@ class Weapon {
         this.name = name;
         this.damage = defaultdamage;
     }};
+
     module.exports = Weapon;
