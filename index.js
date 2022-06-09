@@ -2,8 +2,10 @@ const Fighter = require("./src/Fighter.js");
 const Weapon = require("./src/Weapon.js");
 
 /** Create Heracles  */
-const heracles = new Fighter("🧔 Heracles", 20, 6, new Weapon("Sword", 10));
+const heracles = new Fighter("🧔 Heracles", 20, 6);
+const sword = new Weapon("Sword");
 
+heracles.weapon = sword;
 
 /** Create the opponent  */
 const nemean = new Fighter("🦁 The Nemean Lion", 11, 13);
@@ -50,5 +52,5 @@ const score = (fighter1, fighter2) => {
 
     console.log(`💀 ${result.loser.name} is dead`);
     console.log(`🏆 ${result.winner.name} wins (💙 ${result.winner.life} )`);
-
+    console.log(heracles);
 }
